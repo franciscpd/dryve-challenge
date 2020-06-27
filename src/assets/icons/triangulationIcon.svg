@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+    <defs>
+        <path id="prefix__a" d="M7 0v6h.73l-3.94 7H0v6h6v-2h8v2h6v-6h-3.79l-3.94-7H13V0M9 2h2v2H9m1 2.04l4 7.11V15H6v-1.85M2 15h2v2H2m14-2h2v2h-2"/>
+    </defs>
+    <g id="wrapper-icon-traingulation" fill="none" fill-rule="evenodd" opacity=".3" transform="translate(2 3)">
+        <mask id="prefix__b" fill="#fff">
+            <use xlink:href="#prefix__a"/>
+        </mask>
+        <use fill="#000" fill-rule="nonzero" xlink:href="#prefix__a"/>
+        <g id="icon-traingulation" fill="#000" mask="url(#prefix__b)">
+            <path d="M0 0H50V50H0z" transform="translate(-15 -16)"/>
+        </g>
+    </g>
+</svg>

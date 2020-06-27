@@ -1,9 +1,48 @@
 import { createMuiTheme } from '@material-ui/core/styles';
-import {} from '@material-ui/core/colors';
+
+import InterRegularWoff2 from '@assets/fonts/Inter-Regular.woff2';
+import InterBoldWoff2 from '@assets/fonts/Inter-Bold.woff2';
+import InterMediumWoff2 from '@assets/fonts/Inter-Medium.woff2';
+
+const inter = {
+  fontFamily: 'Inter',
+  fontStyle: 'normal',
+  fontWeight: 400,
+  fontDisplay: 'swap',
+  src: `
+    local('Inter'),
+    local('Inter-Regular'),
+    url(${InterRegularWoff2}) format('woff2')
+  `,
+};
+
+const interBold = {
+  fontFamily: 'Inter',
+  fontStyle: 'normal',
+  fontWeight: 700,
+  fontDisplay: 'swap',
+  src: `
+    local('Inter'),
+    local('Inter-Bold'),
+    url(${InterBoldWoff2}) format('woff2')
+  `,
+};
+
+const interMedium = {
+  fontFamily: 'Inter',
+  fontStyle: 'normal',
+  fontWeight: 500,
+  fontDisplay: 'swap',
+  src: `
+    local('Inter'),
+    local('Inter-Medium'),
+    url(${InterMediumWoff2}) format('woff2')
+  `,
+};
 
 export default createMuiTheme({
   typography: {
-    fontFamily: ['Inter', 'sans-serif'].join(','),
+    fontFamily: 'Inter',
     fontSize: 12,
   },
   palette: {
@@ -18,6 +57,7 @@ export default createMuiTheme({
       secondary: '#E5E7EA',
     },
     grey: {
+      '400': '#b2b2b2',
       '500': '#a5abb7',
     },
     background: {
@@ -31,6 +71,7 @@ export default createMuiTheme({
   overrides: {
     MuiCssBaseline: {
       '@global': {
+        '@font-face': [inter, interBold, interMedium],
         '*::-webkit-scrollbar': {
           width: '0.4em',
         },
