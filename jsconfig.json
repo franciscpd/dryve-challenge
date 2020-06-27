@@ -11,7 +11,8 @@
       "@components/*": ["./components/*"],
       "@modules/*": ["./modules/*"],
       "@config/*": ["./config/*"],
-      "@styles/*": ["./styles/*"]
+      "@styles/*": ["./styles/*"],
+      "@assets/*": ["./assets/*"]
     }
   }
 }

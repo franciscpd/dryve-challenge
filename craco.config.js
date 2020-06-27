@@ -15,6 +15,7 @@ module.exports = {
       '@modules': path.resolve(__dirname, 'src', 'modules'),
       '@config': path.resolve(__dirname, 'src', 'config'),
       '@styles': path.resolve(__dirname, 'src', 'styles'),
+      '@assets': path.resolve(__dirname, 'src', 'assets'),
     },
   },
   jest: {
