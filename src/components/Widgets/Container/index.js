@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Box, Tooltip } from '@material-ui/core';
 
 import * as S from './styles';
 
-const Container = ({ title, extra, children, footer }) => (
+const Container = ({ title, help, extra, children, footer }) => (
   <S.Paper variant="outlined">
     <S.Container>
       <S.Header
@@ -11,7 +12,14 @@ const Container = ({ title, extra, children, footer }) => (
         alignItems="center"
         justifyContent="space-between"
       >
-        <S.Title>{title}</S.Title>
+        <Box display="flex" alignItems="center">
+          <S.Title>{title}</S.Title>
+          {help && (
+            <Tooltip title={help} arrow>
+              <S.HelpIcon />
+            </Tooltip>
+          )}
+        </Box>
         {extra}
       </S.Header>
       {children}
@@ -25,11 +33,13 @@ Container.propTypes = {
   extra: PropTypes.element,
   footer: PropTypes.element,
   children: PropTypes.element.isRequired,
+  help: PropTypes.string,
 };
 
 Container.defaultProps = {
   extra: null,
   footer: null,
+  help: null,
 };
 
 export default Container;

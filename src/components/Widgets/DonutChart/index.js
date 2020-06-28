@@ -23,8 +23,8 @@ const defaultOptions = {
   enableInteractivity: true,
 };
 
-const DonutChart = ({ title, data, options, colors }) => (
-  <Container title={title}>
+const DonutChart = ({ title, data, options, colors, help }) => (
+  <Container title={title} help={help}>
     <Chart
       width="100%"
       height="200px"
@@ -42,12 +42,14 @@ DonutChart.propTypes = {
   ),
   options: PropTypes.shape({}),
   colors: PropTypes.arrayOf(PropTypes.string),
+  help: PropTypes.string,
 };
 
 DonutChart.defaultProps = {
   data: [],
   options: {},
   colors: ['#1070ca', '#ec4c47', '#f7d154'],
+  help: null,
 };
 
 export default DonutChart;

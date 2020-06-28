@@ -53,7 +53,11 @@ const Home = () => {
                 />
               </Grid>
               <Grid item xs={12}>
-                <DonutChart title="Preços - Dryve x KBB" data={chartData} />
+                <DonutChart
+                  title="Preços - Dryve x KBB"
+                  data={chartData}
+                  help="Texto de ajuda"
+                />
               </Grid>
             </Grid>
           </Grid>

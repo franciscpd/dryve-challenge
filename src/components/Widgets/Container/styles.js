@@ -4,6 +4,7 @@ import {
   Box as MuiBox,
   Paper as MuiPaper,
 } from '@material-ui/core';
+import MuiHelpIcon from '@material-ui/icons/Help';
 
 export const Paper = styled(MuiPaper)`
   ${({ theme }) => `
@@ -52,4 +53,14 @@ export const Footer = styled.div`
   ${({ theme }) => `
     padding: ${theme.spacing(0, 3)};
   `}
+`;
+
+export const HelpIcon = styled(MuiHelpIcon)`
+  ${({ theme }) => `
+    color: ${theme.palette.grey[500]};
+  `}
+
+  margin-left: 6px;
+  font-size: 14px;
+  cursor: pointer;
 `;
