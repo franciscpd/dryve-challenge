@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "checkJs": true,
+    "jsx": "react",
+    "skipLibCheck": true,
+    "baseUrl": "src",
+    "paths": {
+      "@shared/*": ["./shared/*"],
+      "@services/*": ["./services/*"],
+      "@components/*": ["./components/*"],
+      "@modules/*": ["./modules/*"],
+      "@config/*": ["./config/*"],
+      "@styles/*": ["./styles/*"],
+      "@assets/*": ["./assets/*"]
+    }
+  }
+}
