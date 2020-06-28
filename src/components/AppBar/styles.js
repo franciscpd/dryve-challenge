@@ -8,7 +8,7 @@ import MuiNotificationsIcon from '@material-ui/icons/Notifications';
 export const AppBar = styled(MuiAppBar)`
   ${({ theme }) => `
     background: #fff;
-    box-shadow: 0 1px 0 0 #e0e0e0;
+    box-shadow: 0 1px 0 0 ${theme.palette.grey[200]};
     width: calc(100% - ${theme.spacing(10) + 1}px);
     margin-left: ${theme.spacing(10) + 1}px;
   `}
@@ -26,7 +26,7 @@ export const Box = styled(MuiBox)`
 
 export const Typography = styled(MuiTypography)`
   ${({ theme }) => `
-    color: ${theme.palette.grey['500']};
+    color: ${theme.palette.grey[500]};
     font-size: 10px;
     margin-bottom: 7px;
     margin-left: 7px;
@@ -36,7 +36,7 @@ export const Typography = styled(MuiTypography)`
 
 export const SearchIcon = styled(MuiSearchIcon)`
   ${({ theme }) => `
-    color: ${theme.palette.grey['500']};
+    color: ${theme.palette.grey[500]};
   `}
 `;
 

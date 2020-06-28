@@ -57,6 +57,7 @@ export default createMuiTheme({
       secondary: '#E5E7EA',
     },
     grey: {
+      '200': '#e0e0e0',
       '300': '#dfe3e8',
       '400': '#b2b2b2',
       '500': '#a5abb7',
@@ -78,11 +79,15 @@ export default createMuiTheme({
           width: '0.4em',
         },
         '*::-webkit-scrollbar-track': {
-          '-webkit-box-shadow': 'inset 0 0 6px rgba(0,0,0,0.00)',
+          '-webkit-box-shadow': 'inset 0 0 1px rgba(0,0,0,0.0)',
+        },
+        '*::-webkit-scrollbar-corner': {
+          background: 'transparent',
         },
         '*::-webkit-scrollbar-thumb': {
-          backgroundColor: 'rgba(0,0,0,.1)',
-          outline: '1px solid slategrey',
+          borderRadius: 4,
+          border: '2px solid rgba(0, 0, 0, .1) !important',
+          backgroundColor: 'transparent !important',
         },
       },
     },
