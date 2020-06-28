@@ -46,7 +46,7 @@ const highlightMenu = (theme, colorize = true) => `
 
 export const Drawer = styled(MuiDrawer)`
   ${({ theme }) => `
-    box-shadow: 1px 0 0 0 #e0e0e0;
+    box-shadow: 1px 0 0 0 ${theme.palette.grey[200]};
     overflow-x: 'hidden';
     flex-shrink: 0;
     white-space: 'nowrap';
@@ -88,7 +88,7 @@ export const MenuItem = styled(MuiMenuItem)`
   border-radius: 4px;
 
   .MuiListItemText-primary {
-    font-weight: 700;
+    font-weight: 500;
   }
 
   ${({ theme }) => `
@@ -121,6 +121,9 @@ export const NavLink = styled(RouterNavLink)`
 
     .Mui-selected {
       ${highlightMenu(theme, false)}
+      .MuiTypography-body1 {
+        font-weight: 700;
+      }
 
       &:hover {
         ${highlightMenu(theme)}
