@@ -1,9 +1,9 @@
 {
-  "name": "dashboard-cars",
+  "name": "dryve-challenge",
   "description": "Demo dashboard",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
-  "repository": "git@github.com:franciscpd/dashboard-cars.git",
+  "repository": "git@github.com:franciscpd/dryve-challenge.git",
   "keywords": [
     "js",
     "react"
