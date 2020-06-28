@@ -1,13 +1,14 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import * as S from './styles';
 
-const Content = () => {
-  return (
-    <S.Container maxWidth={false}>
-      <h1>Content</h1>
-    </S.Container>
-  );
+const Content = ({ children }) => {
+  return <S.Container maxWidth={false}>{children}</S.Container>;
+};
+
+Content.propTypes = {
+  children: PropTypes.element.isRequired,
 };
 
 export default Content;
