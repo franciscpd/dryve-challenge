@@ -1,11 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Paper from '@material-ui/core/Paper';
 
 import * as S from './styles';
 
 const Container = ({ title, extra, children, footer }) => (
-  <Paper variant="outlined">
+  <S.Paper variant="outlined">
     <S.Container>
       <S.Header
         display="flex"
@@ -16,9 +15,9 @@ const Container = ({ title, extra, children, footer }) => (
         {extra}
       </S.Header>
       {children}
-      {footer && <S.Footer>{footer}</S.Footer>}
+      <S.Footer>{footer}</S.Footer>
     </S.Container>
-  </Paper>
+  </S.Paper>
 );
 
 Container.propTypes = {
