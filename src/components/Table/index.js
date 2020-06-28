@@ -9,6 +9,7 @@ const defaultOptions = {
   paging: false,
   showTitle: false,
   toolbar: false,
+  draggable: false,
 };
 
 const Table = ({ options, data, columns, ...rest }) => (
