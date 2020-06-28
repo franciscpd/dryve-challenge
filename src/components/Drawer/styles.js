@@ -46,7 +46,7 @@ const highlightMenu = (theme, colorize = true) => `
 
 export const Drawer = styled(MuiDrawer)`
   ${({ theme }) => `
-    box-shadow: 1px 0 0 0 #e0e0e0;
+    box-shadow: 1px 0 0 0 ${theme.palette.grey[200]};
     overflow-x: 'hidden';
     flex-shrink: 0;
     white-space: 'nowrap';
