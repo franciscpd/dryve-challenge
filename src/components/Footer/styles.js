@@ -9,7 +9,7 @@ import {
 export const Container = styled(MuiContainer)`
   ${({ theme }) => `
     width: calc(100% - ${theme.spacing(15) + 1}px);
-    margin-left: ${theme.spacing(10) + 1}px;
+    margin-left: ${theme.spacing(11) + 1}px;
     margin-right: ${theme.spacing(10) + 1}px;
     margin-top: ${theme.spacing(2) + 1}px;;
   `}

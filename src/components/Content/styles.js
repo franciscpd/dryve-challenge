@@ -7,7 +7,7 @@ export const Container = styled(MuiContainer)`
     margin-bottom: ${theme.spacing(2) + 1}px;
 
     width: calc(100% - ${theme.spacing(15) + 1}px);
-    margin-left: ${theme.spacing(10) + 1}px;
+    margin-left: ${theme.spacing(11) + 1}px;
     margin-right: ${theme.spacing(10) + 1}px;
 
     min-height: calc(100vh - ${theme.spacing(26) + 1}px);
