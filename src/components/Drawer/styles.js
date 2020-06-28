@@ -27,8 +27,8 @@ const transitionEntering = (theme) => `
   })};
 `;
 
-const highlightMenu = (theme) => `
-  background: ${theme.palette.secondary.main};
+const highlightMenu = (theme, colorize = true) => `
+  background: ${colorize ? theme.palette.secondary.main : 'transparent'};
   color: ${theme.palette.primary.main} !important;
 
   .MuiListItemText-root {
@@ -70,6 +70,10 @@ export const Drawer = styled(MuiDrawer)`
     &:hover {
       width: 240px;
       ${transitionEntering(theme)}
+
+      .Mui-selected {
+        ${highlightMenu(theme)}
+      }
     }
   `}
 `;
@@ -116,7 +120,7 @@ export const NavLink = styled(RouterNavLink)`
     }
 
     .Mui-selected {
-      ${highlightMenu(theme)}
+      ${highlightMenu(theme, false)}
 
       &:hover {
         ${highlightMenu(theme)}

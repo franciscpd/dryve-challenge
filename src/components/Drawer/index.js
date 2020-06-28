@@ -43,7 +43,7 @@ const Drawler = () => {
       </S.List>
       <S.MenuList>
         {routes.map((route, key) => (
-          <S.NavLink to={route.path} key={key}>
+          <S.NavLink to={route.disabled ? '#' : route.path} key={key}>
             <S.MenuItem
               selected={isActiveRoute(route.path)}
               disabled={route.disabled}

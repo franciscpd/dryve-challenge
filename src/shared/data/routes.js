@@ -1,29 +1,38 @@
 import React from 'react';
-import { Home, Person, DriveEta, AccountBalance } from '@material-ui/icons';
+import {
+  Home as HomeIcon,
+  Person,
+  DriveEta,
+  AccountBalanceWallet,
+} from '@material-ui/icons';
 import { SvgIcon } from '@material-ui/core';
 
 import { ReactComponent as TriangulationIcon } from '@assets/icons/triangulationIcon.svg';
+
+import Home from '@modules/Home';
+import Clients from '@modules/Clients';
+import Cars from '@modules/Cars';
 
 const Triangulation = () => <SvgIcon component={TriangulationIcon} />;
 
 export default [
   {
     path: '/',
-    icon: <Home />,
+    icon: <HomeIcon />,
     label: 'Início',
-    component: null,
+    component: Home,
   },
   {
     path: '/clients',
     icon: <Person />,
     label: 'Clientes',
-    component: null,
+    component: Clients,
   },
   {
-    path: '/drives',
+    path: '/cars',
     icon: <DriveEta />,
     label: 'Veículos',
-    component: null,
+    component: Cars,
   },
   {
     path: '/triangulation',
@@ -33,7 +42,7 @@ export default [
   },
   {
     path: '/balance',
-    icon: <AccountBalance />,
+    icon: <AccountBalanceWallet />,
     disabled: true,
     label: 'Financeiro',
     component: null,
