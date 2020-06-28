@@ -11,6 +11,7 @@ export const AppBar = styled(MuiAppBar)`
     box-shadow: 0 1px 0 0 ${theme.palette.grey[200]};
     width: calc(100% - ${theme.spacing(10) + 1}px);
     margin-left: ${theme.spacing(10) + 1}px;
+    padding-left: ${theme.spacing(1) + 1}px;
   `}
 `;
 
