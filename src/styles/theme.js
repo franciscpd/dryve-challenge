@@ -57,8 +57,10 @@ export default createMuiTheme({
       secondary: '#E5E7EA',
     },
     grey: {
+      '300': '#dfe3e8',
       '400': '#b2b2b2',
       '500': '#a5abb7',
+      '600': '#616161',
     },
     background: {
       default: '#F3F4F6',
