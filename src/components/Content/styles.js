@@ -3,7 +3,7 @@ import MuiContainer from '@material-ui/core/Container';
 
 export const Container = styled(MuiContainer)`
   ${({ theme }) => `
-    margin-top: ${theme.spacing(8) + 1}px;
+    margin-top: ${theme.spacing(10) + 1}px;
     margin-bottom: ${theme.spacing(2) + 1}px;
 
     width: calc(100% - ${theme.spacing(15) + 1}px);
