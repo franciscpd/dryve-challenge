@@ -50,24 +50,16 @@ export const Drawer = styled(MuiDrawer)`
     overflow-x: 'hidden';
     flex-shrink: 0;
     white-space: 'nowrap';
-    width: ${theme.spacing(8) + 1}px;
+    width: ${theme.spacing(10) + 1}px;
 
     ${transitionLeaving(theme)}
-
-    ${theme.breakpoints.up('sm')} {
-      width: ${theme.spacing(10) + 1}px;
-    }
 
     .MuiDrawer-paper {
       padding: 45px 15px 0px 15px;
       overflow-x: 'hidden';
-      width: ${theme.spacing(8) + 1}px;
+      width: ${theme.spacing(10) + 1}px;
 
       ${transitionLeaving(theme)}
-
-      ${theme.breakpoints.up('sm')} {
-        width: ${theme.spacing(10) + 1}px;
-      }
 
       &:hover {
         width: 240px;

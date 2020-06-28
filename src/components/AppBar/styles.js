@@ -9,13 +9,8 @@ export const AppBar = styled(MuiAppBar)`
   ${({ theme }) => `
     background: #fff;
     box-shadow: 0 1px 0 0 #e0e0e0;
-    width: calc(100% - ${theme.spacing(8) + 1}px);
-    margin-left: ${theme.spacing(8) + 1}px;
-
-    ${theme.breakpoints.up('sm')} {
-      width: calc(100% - ${theme.spacing(10) + 1}px);
-      margin-left: ${theme.spacing(10) + 1}px;
-    }
+    width: calc(100% - ${theme.spacing(10) + 1}px);
+    margin-left: ${theme.spacing(10) + 1}px;
   `}
 `;
 
