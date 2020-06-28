@@ -1,0 +1,3 @@
+export const CARS_DATA = 'CARS_DATA';
+export const CARS_DATA_FETCHING = 'CARS_DATA_FETCHING';
+export const CARS_DATA_FETCHED = 'CARS_DATA_FETCHED';
