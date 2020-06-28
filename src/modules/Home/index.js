@@ -3,8 +3,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Grid } from '@material-ui/core';
 
 import { getData } from '@shared/store/reducers/cars/actions';
-import { Variation, Table } from '@components/Widgets';
-import { variations } from '@shared/data/home';
+import { Variation, Table, ListData } from '@components/Widgets';
+import { variations, buyIntentions } from '@shared/data/home';
 
 import { carData, priceData, statusData } from './Columns';
 
@@ -43,6 +43,16 @@ const Home = () => {
               options={{ sorting: false }}
               isLoading={isLoading}
             />
+          </Grid>
+          <Grid item xs={12} md={4}>
+            <Grid container spacing={4}>
+              <Grid item xs={12}>
+                <ListData
+                  title="Top intenções de compra"
+                  data={buyIntentions}
+                />
+              </Grid>
+            </Grid>
           </Grid>
         </Grid>
       </Grid>
