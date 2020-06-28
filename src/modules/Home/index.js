@@ -3,8 +3,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Grid } from '@material-ui/core';
 
 import { getData } from '@shared/store/reducers/cars/actions';
-import { Variation, Table, ListData } from '@components/Widgets';
-import { variations, buyIntentions } from '@shared/data/home';
+import { Variation, Table, ListData, DonutChart } from '@components/Widgets';
+import { variations, buyIntentions, chartData } from '@shared/data/home';
 
 import { carData, priceData, statusData } from './Columns';
 
@@ -51,6 +51,9 @@ const Home = () => {
                   title="Top intenções de compra"
                   data={buyIntentions}
                 />
+              </Grid>
+              <Grid item xs={12}>
+                <DonutChart title="Preços - Dryve x KBB" data={chartData} />
               </Grid>
             </Grid>
           </Grid>

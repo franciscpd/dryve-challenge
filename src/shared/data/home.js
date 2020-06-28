@@ -61,3 +61,10 @@ export const buyIntentions = [
     total: 86,
   },
 ];
+
+export const chartData = [
+  ['Dryve x KBB', 'Em porcentual'],
+  ['Na média', 60],
+  ['Acima da média', 25],
+  ['Abaixo da média', 15],
+];
