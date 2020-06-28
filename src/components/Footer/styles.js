@@ -25,6 +25,7 @@ export const Box = styled(MuiBox)`
 
   ${({ theme }) => `
     margin-top: ${theme.spacing(2) + 1}px;
+    margin-bottom: ${theme.spacing(2) + 1}px;
   `}
 `;
 
