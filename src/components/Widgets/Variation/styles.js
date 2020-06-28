@@ -39,7 +39,7 @@ export const Value = styled(Label)`
 
 export const Container = styled(MuiBox)`
   ${({ theme }) => `
-    padding: ${theme.spacing(3, 4)};
+    padding: ${theme.spacing(2, 3)};
   `}
 `;
 

@@ -3,13 +3,9 @@ import PropTypes from 'prop-types';
 import { Paper, Box, Typography } from '@material-ui/core';
 import { ArrowDropDown, ArrowDropUp } from '@material-ui/icons';
 
-import * as S from './styles';
+import { percent as percentFormatter } from '@shared/utils/formatters';
 
-const formatter = new Intl.NumberFormat('pt-BR', {
-  style: 'percent',
-  minimumFractionDigits: 0,
-  maximumFractionDigits: 0,
-});
+import * as S from './styles';
 
 const Variation = ({ label, value, icon, type, percent, captionPercent }) => (
   <Paper variant="outlined">
@@ -24,13 +20,13 @@ const Variation = ({ label, value, icon, type, percent, captionPercent }) => (
         {type === 'down' ? (
           <S.PercentDown display="flex" alignItems="center">
             <ArrowDropDown />
-            {formatter.format(percent)}
+            {percentFormatter.format(percent)}
             <Typography>{captionPercent}</Typography>
           </S.PercentDown>
         ) : (
           <S.PercentUp display="flex" alignItems="center">
             <ArrowDropUp />
-            {formatter.format(percent)}
+            {percentFormatter.format(percent)}
             <Typography>{captionPercent}</Typography>
           </S.PercentUp>
         )}
