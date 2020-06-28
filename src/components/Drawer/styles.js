@@ -88,7 +88,7 @@ export const MenuItem = styled(MuiMenuItem)`
   border-radius: 4px;
 
   .MuiListItemText-primary {
-    font-weight: 700;
+    font-weight: 500;
   }
 
   ${({ theme }) => `
@@ -121,6 +121,9 @@ export const NavLink = styled(RouterNavLink)`
 
     .Mui-selected {
       ${highlightMenu(theme, false)}
+      .MuiTypography-body1 {
+        font-weight: 700;
+      }
 
       &:hover {
         ${highlightMenu(theme)}
