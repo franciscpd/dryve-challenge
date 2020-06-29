@@ -61,6 +61,29 @@ export const Table = styled.div.attrs((props) => ({
             color: #7f7f7f;
           }
         }
+
+        > div:last-child {
+          flex-grow: 1;
+          display: flex;
+          justify-content: flex-end;
+
+          .MuiTypography-caption {
+            display: none;
+          }
+
+          .MuiIconButton-root {
+            color: #7f7f7f;
+
+            :disabled {
+              color: rgba(0, 0, 0, 0.26);
+            }
+          }
+
+          > span:first-child,
+          > span:last-child {
+            display: none;
+          }
+        }
       }
 
       .MuiTypography-body2 {
@@ -70,29 +93,6 @@ export const Table = styled.div.attrs((props) => ({
         ${({ theme }) => `
           color: ${theme.palette.grey[500]};
         `}
-      }
-
-      div[class^='MTablePaginationInner-root-'] {
-        flex-grow: 1;
-        display: flex;
-        justify-content: flex-end;
-
-        .MuiTypography-caption {
-          display: none;
-        }
-
-        .MuiIconButton-root {
-          color: #7f7f7f;
-
-          :disabled {
-            color: rgba(0, 0, 0, 0.26);
-          }
-        }
-
-        > span:first-child,
-        > span:last-child {
-          display: none;
-        }
       }
     }
   }
