@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Grid, Box, InputAdornment } from '@material-ui/core';
 import AddIcon from '@material-ui/icons/Add';
@@ -21,6 +21,8 @@ const columns = [
 ];
 
 const Clients = () => {
+  const [search, handleSearch] = useState('');
+
   const dispatch = useDispatch();
   const { data, isLoading } = useSelector((state) => state.clients);
 
@@ -44,6 +46,8 @@ const Clients = () => {
                     variant="outlined"
                     placeholder="Buscar por nome..."
                     fullWidth
+                    value={search}
+                    onChange={(e) => handleSearch(e.target.value)}
                     InputProps={{
                       endAdornment: (
                         <InputAdornment position="end">
@@ -70,7 +74,9 @@ const Clients = () => {
       <Grid item xs={12}>
         <Table
           columns={columns}
-          data={data}
+          data={data.filter((d) =>
+            d.name.toLowerCase().includes(search.toLowerCase())
+          )}
           isLoading={isLoading}
           options={{
             tableLayout: 'fixed',
