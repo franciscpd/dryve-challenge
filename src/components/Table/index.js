@@ -10,21 +10,34 @@ const defaultOptions = {
   showTitle: false,
   toolbar: false,
   draggable: false,
+  pageSize: 10,
 };
 
 const Table = ({ options, data, columns, ...rest }) => (
-  <S.Table>
+  <S.Table selection={!!options.selection}>
     <MaterialTable
       options={{ ...defaultOptions, ...options }}
       columns={columns.slice(0).map((it) => ({ ...it }))}
       data={Array.isArray(data) ? data.slice(0).map((it) => ({ ...it })) : data}
+      localization={{
+        pagination: {
+          labelDisplayedRows: '{from}-{to} de {count}',
+          labelRowsSelect: '',
+          labelRowsPerPage: 'Itens por página:',
+        },
+        header: {
+          actions: '',
+        },
+      }}
       {...rest}
     />
   </S.Table>
 );
 
 Table.propTypes = {
-  options: PropTypes.shape({}),
+  options: PropTypes.shape({
+    selection: PropTypes.bool,
+  }),
   data: PropTypes.arrayOf(PropTypes.shape({})),
   columns: PropTypes.arrayOf(PropTypes.shape({})),
 };
