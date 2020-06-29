@@ -1,16 +1,20 @@
 import api from '@services/api';
 
-import { CARS_DATA, CARS_DATA_FETCHING, CARS_DATA_FETCHED } from './types';
+import {
+  CLIENTS_DATA,
+  CLIENTS_DATA_FETCHING,
+  CLIENTS_DATA_FETCHED,
+} from './types';
 
 const stateAction = {
   fetchingData: () => ({
-    type: CARS_DATA_FETCHING,
+    type: CLIENTS_DATA_FETCHING,
   }),
   fetchedData: () => ({
-    type: CARS_DATA_FETCHED,
+    type: CLIENTS_DATA_FETCHED,
   }),
   setData: (data) => ({
-    type: CARS_DATA,
+    type: CLIENTS_DATA,
     payload: data,
   }),
 };
@@ -20,12 +24,12 @@ export const getData = () => async (dispatch, getState) => {
     dispatch(stateAction.fetchingData());
 
     const {
-      cars: { data },
+      clients: { data },
     } = getState();
 
     if (!data || data.length === 0) {
       const res = await api
-        .get('/v2/5eb553df31000060006994a8')
+        .get('/v3/cd37290a-53a4-49a8-af80-a9da0b7cb083')
         .then((r) => r.data);
       dispatch(stateAction.setData(res));
     }
