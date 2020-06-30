@@ -1,7 +1,7 @@
 {
   "name": "dryve-challenge",
   "description": "Demo dashboard",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "private": true,
   "repository": "git@github.com:franciscpd/dryve-challenge.git",
   "keywords": [
