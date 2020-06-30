@@ -11,6 +11,7 @@ import { ReactComponent as TriangulationIcon } from '@assets/icons/triangulation
 
 import Home from '@modules/Home';
 import Clients from '@modules/Clients';
+import NewClient from '@modules/Clients/Pages/New';
 import Cars from '@modules/Cars';
 
 const Triangulation = () => <SvgIcon component={TriangulationIcon} />;
@@ -21,24 +22,32 @@ export default [
     icon: <HomeIcon />,
     label: 'Início',
     component: Home,
+    showSidebar: true,
   },
   {
     path: '/clients',
     icon: <Person />,
     label: 'Clientes',
     component: Clients,
+    showSidebar: true,
+  },
+  {
+    path: '/clients/new',
+    component: NewClient,
   },
   {
     path: '/cars',
     icon: <DriveEta />,
     label: 'Veículos',
     component: Cars,
+    showSidebar: true,
   },
   {
     path: '/triangulation',
     icon: <Triangulation />,
     label: 'Triangulação',
     component: null,
+    showSidebar: true,
   },
   {
     path: '/balance',
@@ -46,5 +55,6 @@ export default [
     disabled: true,
     label: 'Financeiro',
     component: null,
+    showSidebar: true,
   },
 ];

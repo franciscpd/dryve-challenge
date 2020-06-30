@@ -28,6 +28,9 @@ const Table = ({ options, data, columns, ...rest }) => (
         header: {
           actions: '',
         },
+        body: {
+          emptyDataSourceMessage: 'Nenhum registro encontrado',
+        },
       }}
       {...rest}
     />
