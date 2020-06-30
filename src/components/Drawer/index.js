@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import { Typography } from '@material-ui/core';
@@ -42,17 +43,19 @@ const Drawler = () => {
         </S.ListItem>
       </S.List>
       <S.MenuList>
-        {routes.map((route, key) => (
-          <S.NavLink to={route.disabled ? '#' : route.path} key={key}>
-            <S.MenuItem
-              selected={isActiveRoute(route.path)}
-              disabled={route.disabled}
-            >
-              <S.ListItemIcon>{route.icon}</S.ListItemIcon>
-              <S.ListItemText primary={route.label} />
-            </S.MenuItem>
-          </S.NavLink>
-        ))}
+        {routes
+          .filter((r) => r.showSidebar)
+          .map((route, key) => (
+            <S.NavLink to={route.disabled ? '#' : route.path} key={key}>
+              <S.MenuItem
+                selected={isActiveRoute(route.path)}
+                disabled={route.disabled}
+              >
+                <S.ListItemIcon>{route.icon}</S.ListItemIcon>
+                <S.ListItemText primary={route.label} />
+              </S.MenuItem>
+            </S.NavLink>
+          ))}
       </S.MenuList>
     </S.Drawer>
   );
