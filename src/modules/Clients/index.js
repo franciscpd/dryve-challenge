@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 import { Grid, Box, InputAdornment } from '@material-ui/core';
 import AddIcon from '@material-ui/icons/Add';
 import SearchIcon from '@material-ui/icons/Search';
@@ -23,6 +24,7 @@ const columns = [
 const Clients = () => {
   const [search, handleSearch] = useState('');
 
+  const history = useHistory();
   const dispatch = useDispatch();
   const { data, isLoading } = useSelector((state) => state.clients);
 
@@ -63,7 +65,12 @@ const Clients = () => {
           <Grid item xs={12} lg={6} xl={7}>
             <Grid container justify="flex-end">
               <Grid item xs={4} sm={3} xl={2}>
-                <Button fullWidth startIcon={<AddIcon />}>
+                <Button
+                  fullWidth
+                  variant="contained"
+                  startIcon={<AddIcon />}
+                  onClick={() => history.push('/clients/new')}
+                >
                   Adicionar
                 </Button>
               </Grid>
